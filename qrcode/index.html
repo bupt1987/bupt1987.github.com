@@ -29,9 +29,11 @@
 
 <script>
 	$('#get_button').click(function(){
+		var obj = $('#show');
+		obj.html('');
 		var input = $('#input').val();
 		if(input.length > 0) {
-			$('#show').qrcode(input);
+			obj.qrcode(input);
 		}
 	});
 </script>
