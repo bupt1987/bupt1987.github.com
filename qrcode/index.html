@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>二维码生产工具</title>
+	<link rel="stylesheet" type="text/css" href="../asset/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../asset/bootstrap/css/bootstrap-theme.min.css">
+	<script src="../asset/jquery/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+</head>
+<body style="max-width: 1200px;margin: 0 auto">
+
+<div class="row" style="margin-top: 20%">
+	<div class="col-lg-3"></div>
+	<div class="col-lg-6">
+		<div class="input-group">
+			<input id="input" type="text" class="form-control" placeholder="Input Something...">
+      <span class="input-group-btn">
+        <button id="get_button" class="btn btn-default" type="button">Get!</button>
+      </span>
+		</div>
+	</div>
+	<div class="col-lg-3"></div>
+</div>
+<div class="row" style="margin-top: 20px">
+	<div class="col-lg-3"></div>
+	<div class="col-lg-6" id="show" style="text-align: center"></div>
+	<div class="col-lg-3"></div>
+</div>
+
+<script>
+	$('#get_button').click(function(){
+		var input = $('#input').val();
+		if(input.length > 0) {
+			$('#show').qrcode(input);
+		}
+	});
+</script>
+
+</body>
+</html>
