@@ -2,8 +2,8 @@
 var Settings = function () {
 	var ishttps = 'https:' == document.location.protocol;
 	if(ishttps) {
-		this.socketServer = 'wss://54.169.152.168:8585';	
+		this.socketServer = 'wss://killua.net:8585';	
 	}else{
-		this.socketServer = 'ws://54.169.152.168:8585';	
+		this.socketServer = 'ws://killua.net:8585';	
 	}
 };
