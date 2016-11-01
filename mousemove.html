@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="asset/jquery/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+
+<div id="move" style="width: 30px; height: 30px; position: absolute; background-color: red;">
+</div>
+
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+	$(function() {
+		$(window).mousemove(function() {
+			$("#move").css({ top: event.clientY - 15, left: event.clientX - 15});//event.clientY 鼠标所在的坐标的Y轴
+		});
+	})
+</script>
